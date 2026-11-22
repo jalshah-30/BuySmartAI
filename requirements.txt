@@ -1,0 +1,11 @@
+python-dotenv
+serpapi
+tavily-python
+langchain_core
+langchain_text_splitters
+sentence-transformers
+langchain-huggingface
+chromadb
+langchain-chroma
+langchain-groq
+flask

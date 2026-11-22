@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BuySmart AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="10" fill="#2874f0"/>
+          <path d="M11 14h3l2.5 11h10l2-8H16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="18" cy="29" r="1.8" fill="#ffe500"/><circle cx="26" cy="29" r="1.8" fill="#ffe500"/>
+          <path d="M12 33c5 3 12 3 17-1" fill="none" stroke="#ff9900" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <h1>BuySmart <span>AI</span></h1>
+          <p>Your shopping research agent</p>
+        </div>
+      </div>
+      <button id="newBtn" class="ghost" type="button">New search</button>
+    </header>
+
+    <main id="messages" class="messages" aria-live="polite"></main>
+
+    <div id="chips" class="chips"></div>
+
+    <form id="composer" class="composer" autocomplete="off">
+      <input id="input" type="text" placeholder="What do you want to buy?" aria-label="Message" required>
+      <button id="send" type="submit">Send</button>
+    </form>
+    <p class="hint">Research data is deleted when you start a new search or close this tab.</p>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
